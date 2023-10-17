@@ -37,8 +37,19 @@ const animals =[
     {
     name:"chimpanzee",
     scientificname:"Pan Troglodytes",
-    environment:"jungle",
+    environment:["jungle","woodlands","grasslands","rainforest"],
     skeleton:true,
     exoskeleton: false,
     },
 ]
+animals.forEach(animal=> {
+    console.log(animal.name)
+});
+animals.forEach(animal => {
+    animal.environment.forEach(habitat=>{
+     console.log(habitat)   
+    })   
+});
+animals.filter(animal =>{
+animal.skeleton===true
+});
